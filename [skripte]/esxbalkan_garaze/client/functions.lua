@@ -1,3 +1,14 @@
+ESX = nil 
+Citizen.CreateThread(function()
+    while ESX == nil do
+        Citizen.Wait(0)
+
+        TriggerEvent("esx:getSharedObject", function(obj)
+            ESX = obj
+        end)
+    end
+end)
+
 cachedData = {} -- nebi trebalo error izbacivat vise
 OpenGarageMenu = function()
     local currentGarage = cachedData["currentGarage"]
