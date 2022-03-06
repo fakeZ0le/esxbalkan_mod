@@ -1,4 +1,6 @@
 
+ALTER TABLE `users` ADD COLUMN `phone_number` VARCHAR(10) NULL;
+
 DROP TABLE IF EXISTS `crew_phone_bank`;
 CREATE TABLE IF NOT EXISTS `crew_phone_bank` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
